@@ -21,14 +21,14 @@
                 if (item.url.substr(-3, 3) == 'mp4' || item.url.substr(-3, 3) == 'mpg') {
                     console.log(item)
                     divs.push(
-                        '<div data-thumb="/img/logo-biggie.svg" data-src="/img/logo-biggie.svg" data-time="' +
+                        '<div data-thumb="/img/logo.svg" data-src="/img/logo.svg" data-time="' +
                         item
                         .timeRefresh +
                         '"><iframe muted src="' + item.url + '?autoplay=1&mute=1' +
                         '" width="100%" height="100%" allow="autoplay" frameborder="0" webkitAllowFullScreen mozallowfullscreen allowFullScreen sandbox></iframe></div>'
                     );
                     // divs.push(
-                    //     '<div autoplay=1 data-thumb="/img/logo-biggie.svg" data-src="/img/logo-biggie.svg" data-time="' +
+                    //     '<div autoplay=1 data-thumb="/img/logo.svg" data-src="/img/logo.svg" data-time="' +
                     //     item
                     //     .timeRefresh +
                     //     '"><video width="100%" height="100%" controls autoplay><source src="' + item.url +
