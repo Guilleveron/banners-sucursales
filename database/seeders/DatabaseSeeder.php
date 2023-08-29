@@ -28,7 +28,7 @@ class DatabaseSeeder extends Seeder
             CategoriesTableSeeder::class,
         ]);
 
-        \App\Models\User::factory(30)->create();
+        //\App\Models\User::factory(30)->create();
         //\App\Models\Banner::factory(6)->create();
 
         \App\Models\Banner::factory()->create(

@@ -1,0 +1,35 @@
+# fly.toml app configuration file generated for banners-sucursales on 2023-08-29T08:45:34-04:00
+#
+# See https://fly.io/docs/reference/configuration/ for information about how to use this file.
+#
+
+app = "banners-sucursales"
+primary_region = "eze"
+console_command = "php /var/www/html/artisan tinker"
+
+[build]
+  [build.args]
+    NODE_VERSION = "18"
+    PHP_VERSION = "8.2"
+
+[env]
+  APP_ENV = "production"
+  LOG_CHANNEL = "stderr"
+  LOG_LEVEL = "info"
+  LOG_STDERR_FORMATTER = "Monolog\\Formatter\\JsonFormatter"
+  SESSION_DRIVER = "cookie"
+  SESSION_SECURE_COOKIE = "true"
+  DB_CONNECTION="pgsql"
+  DB_HOST="127.0.0.1"
+  DB_PORT="15432"
+  DB_DATABASE="banners_sucursales"
+  DB_USERNAME="postgres"
+  DB_PASSWORD="cPXKpjbQOIVfJne"
+
+[http_service]
+  internal_port = 8080
+  force_https = true
+  auto_stop_machines = true
+  auto_start_machines = true
+  min_machines_running = 0
+  processes = ["app"]
